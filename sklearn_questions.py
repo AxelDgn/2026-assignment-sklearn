@@ -136,7 +136,7 @@ class RegistrationSplit(BaseCrossValidator):
         nb_folds = 0
         for _ in self.split(X, y, groups):
             nb_folds += 1
-        return nb_folds        
+        return nb_folds
 
     def split(self, X, y, groups=None):
         """Generate indices to split data into training and test sets.
