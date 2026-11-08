@@ -99,7 +99,6 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import BaseCrossValidator
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import OneHotEncoder, StandardScaler
-from sklearn.model_selection import BaseCrossValidator
 
 
 # ============================================================
@@ -135,12 +134,9 @@ class RegistrationSplit(BaseCrossValidator):
             The number of valid splits.
         """
         nb_folds = 0
-
         for _ in self.split(X, y, groups):
             nb_folds += 1
-
-        return nb_folds
-        
+        return nb_folds        
 
     def split(self, X, y, groups=None):
         """Generate indices to split data into training and test sets.
